@@ -1,0 +1,4 @@
+INFO     root:test_login_api.py:40 预期结果：20000
+INFO     root:test_login_api.py:41 正在请求
+INFO     root:test_login_api.py:43 实际结果：30000
+ERROR    root:test_login_api.py:48 断言错误:assert 20000 == 30000

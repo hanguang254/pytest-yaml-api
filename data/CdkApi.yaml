@@ -1,0 +1,14 @@
+host: http://160.116.208.79:8090/api
+requests:
+  name: 卡密生成
+  method: post
+  url: /vip_ticket/create
+  headers:
+    X-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNjYwOTA0MTIzIiwiaWF0IjoiMTY2MDg3NTMyMyIsInV1aWQiOiIzNjFiNmFlZS1kODA0LTQzYzAtOWM2Ny04NDNkOTBiNWY0ZGYifQ._WgKEsqPdN2jt2PacPCo76bopvp5YeDClvNVFuI1QNg
+  data:
+      created_at: "2022-08-18T08:55:37.021Z"
+      expired_at: "2022-11-16T08:55:37.021Z"
+      face_value: 10
+      id: 0
+      num: 10
+      state: 0
