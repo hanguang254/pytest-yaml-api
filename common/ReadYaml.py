@@ -5,6 +5,8 @@
 @Date ：2022/8/19 10:33 
 '''
 import json
+from string import Template
+
 import yaml
 import jsonpath
 
@@ -33,9 +35,22 @@ class ReadYaml():
                 yaml.dump(data=data, stream=f, allow_unicode=True)  # 单组数据写入,也可以批量写入
                 # 批量写入 docments=[data1,data2]
                 # use_yaml().red_yaml(filepath)
-                print("数据已保存至response.yaml文件")
+                print("数据已保存至token.yaml文件中")
         except Exception as e:
             print("写入数据错误，原因如下：{}".format(e))
+
+    def template_yaml(self,filepath,data):
+        """
+        :param filepath: 读取用例文件地址
+        :param data: 替换的数据（比如token值）
+        :return:
+        目前是只有 token值替换还需更新维护
+        """
+        with open(filepath, 'r', encoding='utf-8') as f:
+            re = Template(f.read()).safe_substitute({'headers': data})
+            # 转换格式
+            result = yaml.safe_load(re)
+        return result
 
 
     """
@@ -103,12 +118,7 @@ class ReadYaml():
 
 
 
-    # def get_result(self):
-    #     try:
-    #
-    #
-    #     except Exception:
-    #         print('错误：{}'.format(Exception))
+
 
 if __name__ == '__main__':
 
