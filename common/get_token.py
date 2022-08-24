@@ -13,7 +13,10 @@ class login_Token():
 
     """
     def get_token(self,data):
-
+        """
+        :param data: 读取的用例参数
+        :return: 返回token值
+        """
         try:
             method=ReadYaml.ReadYaml().get_method(data)      #请求方法
             url=ReadYaml.ReadYaml().get_url(data)            #请求地址
@@ -35,11 +38,29 @@ class login_Token():
         except Exception as e:
             print('错误原因：',e)
 
+    def template_token(self,filepath,apifilepath):
+        """
+        替换token值
+        :param filetoken: 登录用例文件地址
+        :param apifilepath: 测试接口用例文件
+        :return: 返回替换好的用例
+        """
+        #读取登录参数
+        data = ReadYaml.ReadYaml().red_yaml(filepath)
+        #获取最新的token
+        token = login_Token().get_token(data)
+        #替换headers的token值
+        all_api = ReadYaml.ReadYaml().template_yaml(apifilepath,token)
 
+        return all_api
 
 
 if __name__ == '__main__':
-    api = ReadYaml.ReadYaml().red_yaml('../data/Alogin.yaml')
-    print(api)
-    res = login_Token().get_token(api)
+    # api = ReadYaml.ReadYaml().red_yaml('../data/Alogin.yaml')
+    # print(api)
+    # res = login_Token().get_token(api)
+    # print(res)
+
+    #temlate_token 使用
+    res = login_Token().template_token('../data/CdkApi.yaml')
     print(res)

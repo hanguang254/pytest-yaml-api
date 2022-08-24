@@ -4,11 +4,13 @@
 @Author ：le
 @Date ：2022/8/19 14:10 
 '''
+import os
+import sys
+
 import allure
 import pytest
-from common import ReadYaml
+from common import ReadYaml, Logger
 from common import RequestsUitl
-from common import logging_Class
 from common import AllureRun
 
 
@@ -20,7 +22,8 @@ api=ReadYaml.ReadYaml().red_yaml('../data/LoginApi.yaml')
 class Test_login:
 
     def setup_class(self):
-        self.log= logging_Class.BasePage().get_log()
+        self.file = os.path.basename(sys.argv[0])
+        self.log= Logger.Log(self.file).Logger()
         self.log.info('测试开始')
     def teardown_class(self):
         self.log.info('测试完成')

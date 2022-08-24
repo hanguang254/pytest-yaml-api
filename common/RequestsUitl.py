@@ -34,6 +34,11 @@ class RequestsUitl:
                 response =self.session.request(method=method,url=url,json=data,**kwargs)
 
             #请求方法接着下面更新
+            elif method == 'DELETE':
+                response =self.session.request(method=method,url=url,data=data,**kwargs)
+
+            elif method == 'PUT':
+                response = self.session.request(method=method, url=url,data=data,**kwargs)
 
             else:
                  print('无此请求方法，请写入方法函数')

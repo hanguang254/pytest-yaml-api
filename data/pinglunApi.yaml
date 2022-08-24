@@ -1,0 +1,31 @@
+-
+  requeste:
+    name: 发送评论成功
+    method: post
+    url: http://160.116.208.79:8090/api/danmus/create
+    headers: $headers
+    data:
+  #    code: ""
+  #    content: "强强强强"
+  #    created_at: "2022-08-22T16:00:00.000Z"
+  #    icon: "list"
+  #    id: 0
+  #    member: "猫云$1"
+  #    memo: ""
+  #    menu_type: 2
+  #    name: ""
+  #    operate_type: "none"
+  #    part: "1"
+  #    play: "猫云"
+  #    sequence: 10
+  #    status: 0
+  #    time_point: 15
+      uid: 873
+  #    vid: 985
+-
+  requeste:
+    name: 发送评论失败
+    method: post
+    url: http://160.116.208.79:8090/api/danmus/create
+    headers: $headers
+    data:

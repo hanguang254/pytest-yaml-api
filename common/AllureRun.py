@@ -21,8 +21,8 @@ class AllureRun():
         :return:
         """
         try:
-            result_dir = "../logout/json"  # json存储位置
-            report_dir = "../Test_Report/report_test"  # 报告存储位置
+            result_dir = "../test_Report/json"  # json存储位置
+            report_dir = "../test_Report/report_test"  # 报告存储位置
             pytest.main(["-qs", "--alluredir=%s" % result_dir, "--clean-alluredir", test_filename])
             os.system("allure generate --clean %s -o %s" % (result_dir, report_dir))
             print('报告已生成至{}'.format(report_dir))
