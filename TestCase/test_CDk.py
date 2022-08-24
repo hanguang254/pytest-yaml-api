@@ -15,9 +15,9 @@ from common.AllureRun import AllureRun
 from common import get_token
 
 
-
 # 替换接口需要的token
 api =get_token.login_Token().template_token('../data/Alogin.yaml','../data/CdkApi.yaml')
+
 
 
 @allure.feature('CDK接口测试')

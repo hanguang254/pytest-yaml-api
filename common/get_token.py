@@ -40,6 +40,7 @@ class login_Token():
 
     def template_token(self,filepath,apifilepath):
         """
+        这个方法每个用例都会执行一次
         替换token值
         :param filetoken: 登录用例文件地址
         :param apifilepath: 测试接口用例文件
@@ -62,5 +63,5 @@ if __name__ == '__main__':
     # print(res)
 
     #temlate_token 使用
-    res = login_Token().template_token('../data/CdkApi.yaml')
+    res = login_Token().template_token('../data/Alogin.yaml','../data/CdkApi.yaml')
     print(res)

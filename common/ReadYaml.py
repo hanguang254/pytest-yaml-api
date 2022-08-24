@@ -34,7 +34,7 @@ class ReadYaml():
             with open(filepath, "w", encoding="utf-8") as f:  # w是将文件数据清除后重新写入  a是内容追加写入
                 yaml.dump(data=data, stream=f, allow_unicode=True)  # 单组数据写入,也可以批量写入
                 # 批量写入 docments=[data1,data2]
-                print("数据已保存至token.yaml文件中")
+                # print("数据已保存至token.yaml文件中")
         except Exception as e:
             print("写入数据错误，原因如下：{}".format(e))
 
