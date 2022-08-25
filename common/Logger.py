@@ -112,6 +112,7 @@ logger.info('222222222222222222222')
 
 if __name__ == '__main__':
     file=os.path.basename(sys.argv[0])
+
     log = Log(file)
     logger = log.Logger()
     logger.info('222222222222222222222')

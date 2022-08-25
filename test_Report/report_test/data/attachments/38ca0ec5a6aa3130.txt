@@ -1,4 +1,0 @@
-INFO     test_CDk.py:test_CDk.py:50 正在发送请求
-INFO     test_CDk.py:test_CDk.py:54 响应结果：{'code': 500000, 'message': 'Recovery'}
-ERROR    test_CDk.py:test_CDk.py:60 断言错误：assert 500000 == 20000
-INFO     test_CDk.py:test_CDk.py:34 测试完成

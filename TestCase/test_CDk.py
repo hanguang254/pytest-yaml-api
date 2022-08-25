@@ -12,12 +12,11 @@ from common import ReadYaml
 from common.RequestsUitl import RequestsUitl
 from common import Logger
 from common.AllureRun import AllureRun
-from common import get_token
+from common.get_token import login_Token
 
 
 # 替换接口需要的token
-api =get_token.login_Token().template_token('../data/Alogin.yaml','../data/CdkApi.yaml')
-
+api =login_Token().template_token('../data/Alogin.yaml','../data/CdkApi.yaml')
 
 
 @allure.feature('CDK接口测试')
