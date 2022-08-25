@@ -24,6 +24,7 @@ class Test_CDK:
 
 
     def setup_class(self):
+        #获取文件名
         self.file=os.path.basename(sys.argv[0])
         self.log=Logger.Log(self.file).Logger()
         self.log.info('测试开始')

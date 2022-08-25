@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Aug 25 09:34:21 CST 2022","Thu Aug 25 09:34:21 CST 2022","417","","test_CDk","Test_CDK","","","test_cdk[key0]",""
-"failed","Thu Aug 25 09:34:21 CST 2022","Thu Aug 25 09:34:21 CST 2022","205","","test_CDk","Test_CDK","","","test_cdk[key1]",""
+"failed","Thu Aug 25 17:57:36 CST 2022","Thu Aug 25 17:57:36 CST 2022","171","","test_CDk","Test_CDK","","","test_cdk[key1]",""
+"passed","Thu Aug 25 17:57:35 CST 2022","Thu Aug 25 17:57:36 CST 2022","209","","test_CDk","Test_CDK","","","test_cdk[key0]",""

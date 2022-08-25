@@ -1,6 +1,4 @@
-import pytest
-import requests
-import json
+
 import jsonpath
 from common import ReadYaml
 from common import RequestsUitl
