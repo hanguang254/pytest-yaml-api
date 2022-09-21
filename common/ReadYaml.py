@@ -6,7 +6,6 @@
 '''
 import json
 from string import Template
-
 import yaml
 import jsonpath
 
@@ -40,9 +39,10 @@ class ReadYaml():
 
     def template_yaml(self,filepath,data):
         """
+        替换请求头
         :param filepath: 读取用例文件地址
         :param data: 替换的数据（比如token值）
-        :return:
+        :return result:替换完的返回值
         目前是只有 token值替换还需更新维护
         """
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -121,7 +121,5 @@ class ReadYaml():
 
 if __name__ == '__main__':
 
-    # res=ReadYaml('../data/LoginApi.yaml').red_yaml()
-   pass
-    # print(res)
-
+    res = ReadYaml().template_yaml('../data/CdkApi.yaml','X-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNjYzNzcyMTM3IiwiaWF0IjoiMTY2Mzc0MzMzNyIsInV1aWQiOiJhNWFmYzZmOC05YjlmLTQyMTQtYTFjOS1jZTVlOTg3ZWE0OGUifQ.dkH53sCYYBiYuzNq1Li0n0FHXQtrOgHVe7sM71p2-7c')
+    print(res)
