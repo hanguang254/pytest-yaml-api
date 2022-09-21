@@ -103,6 +103,7 @@ class Log():
         return self.__logger
 """
 使用方法：
+file = os.path.basename(__file__)   #获取当前文件名字
 file=os.path.basename(sys.argv[0])  #获取当前文件名字
 log = Log(file)
 logger = log.Logger()
@@ -111,10 +112,9 @@ logger.info('222222222222222222222')
 
 
 if __name__ == '__main__':
-    file=os.path.basename(sys.argv[0])
-
+    file = os.path.basename(__file__)
+    # file=os.path.basename(sys.argv[0])
     log = Log(file)
     logger = log.Logger()
     logger.info('222222222222222222222')
     logger.error('error test')
-    logger.debug()
