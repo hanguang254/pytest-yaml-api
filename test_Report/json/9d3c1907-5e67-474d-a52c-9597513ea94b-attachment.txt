@@ -1,0 +1,5 @@
+INFO     Run.py:test_login_api.py:43 预期结果：20000
+INFO     Run.py:test_login_api.py:44 正在请求
+INFO     Run.py:test_login_api.py:46 实际结果：30000
+ERROR    Run.py:test_login_api.py:52 断言错误:assert 20000 == 30000
+INFO     Run.py:test_login_api.py:29 测试完成
