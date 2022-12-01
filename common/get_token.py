@@ -40,8 +40,8 @@ class login_Token():
         """
         这个方法每个用例都会执行一次
         替换token值
-        :param filetoken: 登录用例文件地址
-        :param apifilepath: 测试接口用例文件
+        :param filepath: 登录用例文件地址
+        :param apifilepath: 测试接口用例文件地址
         :return: 返回替换好的用例
         """
         #读取登录参数

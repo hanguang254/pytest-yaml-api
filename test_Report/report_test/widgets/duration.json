@@ -1,1 +1,1 @@
-[]
+[{"uid":"6f53fc865904edc7","name":"test_cdk[key1]","time":{"start":1666839338077,"stop":1666839338342,"duration":265},"status":"failed","severity":"normal"},{"uid":"7fce356fc6186c9f","name":"test_cdk[key0]","time":{"start":1666839336736,"stop":1666839338025,"duration":1289},"status":"passed","severity":"normal"}]
